@@ -32,12 +32,15 @@
         xaxis: {
           categories: [] as string[]
         },
+        yaxis: {
+          max: 200
+        },
         title: {
           text: 'Nível da Água ao longo do tempo',
           align: 'left' as const
         },
         dataLabels: {
-          enabled: true
+          enabled: false
         },
         stroke: {
           curve: 'smooth' as const

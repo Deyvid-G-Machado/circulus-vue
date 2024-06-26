@@ -32,12 +32,15 @@
         xaxis: {
           categories: [] as string[]
         },
+        yaxis: {
+          max: 1000
+        },
         title: {
           text: 'Turbidez ao longo do tempo',
           align: 'left' as const
         },
         dataLabels: {
-          enabled: true
+          enabled: false
         },
         stroke: {
           curve: 'smooth' as const

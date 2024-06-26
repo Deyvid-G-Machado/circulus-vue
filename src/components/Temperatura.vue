@@ -32,12 +32,15 @@
         xaxis: {
           categories: [] as string[]
         },
+        yaxis: {
+          max: 150
+        },
         title: {
           text: 'Temperatura ao longo do tempo',
           align: 'left' as const
         },
         dataLabels: {
-          enabled: true
+          enabled: false
         },
         stroke: {
           curve: 'smooth' as const

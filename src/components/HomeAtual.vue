@@ -16,19 +16,19 @@
                     <div class="card border-0" style="width: 20rem;">
                         <h2>Medições realizadas</h2>
                         <h2>Temperatura °C</h2>
-                        <div class="progress" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress fs-4" style="height: 30px;" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
                             <div class="progress-bar progress-bar-striped" :style="{ width: temperaturaProgressBar + '%' }">{{ dadosAtual[0]?.temperatura }} °C</div>
                         </div>
                         <h2>Turbidez</h2>
-                        <div class="progress" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress fs-4" style="height: 30px;" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
                             <div class="progress-bar progress-bar-striped" :style="{ width: turbidezProgressBar + '%' }">{{ dadosAtual[0]?.turbidez }}</div>
                         </div>
                         <h2>Ph</h2>
-                        <div class="progress" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress fs-4" style="height: 30px;" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
                             <div class="progress-bar progress-bar-striped" :style="{ width: phProgressBar + '%' }">{{ dadosAtual[0]?.ph }}</div>
                         </div>
                         <h2>Nível d'agua - cm</h2>
-                        <div class="progress" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress fs-4" style="height: 30px;" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
                             <div class="progress-bar progress-bar-striped" :style="{ width: nivelAguaProgressBar + '%' }">{{ dadosAtual[0]?.nivelDaAgua }}</div>
                         </div>
                     </div>
@@ -70,7 +70,7 @@ export default defineComponent({
 
         const nivelAguaProgressBar = computed(() => {
             const nivelAguaAtual = dadosAtual.value[0]?.nivelDaAgua || 0;
-            return converterProgressbar(nivelAguaAtual, 0, 20, 0, 100);
+            return converterProgressbar(nivelAguaAtual, 0, 200, 0, 100);
         });
 
         const converterProgressbar = (valor: number, xMin: number, xMax: number, yMin: number, yMax: number): number => {

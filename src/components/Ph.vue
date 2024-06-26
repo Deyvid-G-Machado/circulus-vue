@@ -32,12 +32,15 @@
         xaxis: {
           categories: [] as string[]
         },
+        yaxis: {
+          max: 14
+        },
         title: {
           text: 'pH ao longo do tempo',
           align: 'left' as const
         },
         dataLabels: {
-          enabled: true
+          enabled: false
         },
         tooltip: {
           enabled: true,

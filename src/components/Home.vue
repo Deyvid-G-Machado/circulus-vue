@@ -5,11 +5,11 @@
 
 <template>
     <div class="row mt-5">
-        <div class="col-md-6  mx-auto">
+        <div class="col-md-6 mx-auto">
             <HomeAtual />
         </div>
     </div>    
-    <div class="row mt-5">
+    <div class="row mt-4">
         <div class="col-md-6 mx-auto">
             <HomeMesCorrente />
         </div>
