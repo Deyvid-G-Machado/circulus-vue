@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const http = axios.create({
-    baseURL: 'http://0.tcp.sa.ngrok.io:12482/'
+    baseURL: 'http://localhost:8080'
 })
 
 export default http;

@@ -62,11 +62,10 @@
         }
       ]);
   
-      // Usar watch para atualizar os dados do gráfico quando todosDados mudar
       watch(todosDados, (newVal) => {
         if (newVal.length > 0) {
-          chartOptions.xaxis.categories = newVal.map(dado => dado.data);
-          series[0].data = newVal.map(dado => dado.nivelDaAgua); // Ajuste conforme a estrutura dos dados
+          chartOptions.xaxis.categories = newVal.map(dado => `${dado.data} ${dado.hora}`);
+          series[0].data = newVal.map(dado => dado.nivelDaAgua);
         }
       }, { immediate: true });
   

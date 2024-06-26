@@ -1,6 +1,6 @@
 <template>
     <div class="mt-5">
-      <apexchart type="bar" height="350" :options="chartOptions" :series="series"></apexchart>
+      <apexchart type="line" height="350" :options="chartOptions" :series="series"></apexchart>
     </div>
   </template>
   
@@ -59,11 +59,10 @@
         }
       ]);
   
-      // Usar watch para atualizar os dados do gráfico quando todosDados mudar
       watch(todosDados, (newVal) => {
         if (newVal.length > 0) {
-          chartOptions.xaxis.categories = newVal.map(dado => dado.data);
-          series[0].data = newVal.map(dado => dado.ph); // Ajuste conforme a estrutura dos dados
+          chartOptions.xaxis.categories = newVal.map(dado => `${dado.data} ${dado.hora}`);
+          series[0].data = newVal.map(dado => dado.ph);
         }
       }, { immediate: true });
   
